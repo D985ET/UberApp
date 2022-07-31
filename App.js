@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import {store} from "./store";
 
 
-//1) Set up reduxj
+//1) Set up redux
 
 export default function App() {
   return (
