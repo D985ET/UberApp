@@ -1,1 +1,4 @@
-rnfes -> alapot megcsinálja
+rnfes -> alapot megcsinálja, egy viewet csinál
+npm start
+yarn add tailwind-react-native-classnames -> tailwind használatához kell
+uri -> uniform resource identifier
