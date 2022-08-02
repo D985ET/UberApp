@@ -1,10 +1,11 @@
-import { StyleSheet, Text, Touchable, View,FlatList, TouchableOpacity, Image } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, Touchable, View,FlatList, TouchableOpacity, Image } from 'react-native';
+import React from 'react';
 import tw from 'tailwind-react-native-classnames';
 import { Icon } from 'react-native-elements';
-
+import { useNavigation } from '@react-navigation/native';
 
 const data = [
+   
     {
         id: "123",
         title:"Get a ride",
@@ -21,6 +22,9 @@ const data = [
 
 // ez a get a ride-os cuccos meg a orderfoodos
 const NavOptions = () => {
+
+  const navigation = useNavigation();
+
   return (
     <FlatList
     data={data} 
@@ -28,8 +32,8 @@ const NavOptions = () => {
     keyExtractor={(item) => item.id}
     renderItem={({ item }) => (
         <TouchableOpacity
-            style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}
-        > 
+            onPress={() => navigation.navigate(item.screen)}
+            style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}> 
             <View>
                 <Image
                 style={{width:120,height:120, resizeMode:"contain"}}

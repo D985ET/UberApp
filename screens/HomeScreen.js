@@ -10,7 +10,7 @@ const HomeScreen = () => {
     <View style={tw`pt-5 pl-5`}>
         <View style={tw`pl-3`}>
           <Image 
-          style={{width:100,height:100,resizeMode:'contain'}}
+          style={{width:100,height:100,resizeMode:"contain"}}
           source= {{uri: "https://links.papareact.com/gzs",}}/>
         </View>
         <NavOptions>
